@@ -64,3 +64,16 @@ def predict_post():
         pred = "Loan Rejected"
 
     return {"Loan Approval Status": pred, "Details": loan_req}
+
+
+@app.route(("/admin"), methods=["GET"])
+def admin():
+    return {
+        "Message": "Welcome to the admin dashboard. Here you can manage the loan application details and monitor the loan approval process.",
+        "Instructions": "Use the provided endpoints to view and manage loan applications.",
+        "Endpoints": {
+            "/": "Home page of the Loan Approval Application",
+            "/predict": "Predict loan approval status based on provided details",
+            "/admin": "Admin dashboard for managing loan applications"
+        }
+    }
