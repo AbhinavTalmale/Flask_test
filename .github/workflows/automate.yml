@@ -16,9 +16,7 @@ jobs:
     steps:
     - name : give access to our repository to workflow
       uses: actions/checkout@v4
-      with:
-        repository: Flask_test/Loan-API
-        token: ${{ secrets.GITHUB_TOKEN }}
+      
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
